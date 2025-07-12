@@ -14,17 +14,17 @@
                 var op1 = stack.Pop();
                 float res;
                 if (item == "+") {
-                    res = op1 + op2;
+                    res = op1 + op2; // invalid if is empty stack
                 }
-                else if (item == "-") {
+                else if (item == "-") { //not a number, an operator, or empty.
                     res = op1 - op2;
                 }
-                else if (item == "*") {
+                else if (item == "*") { //not exactly one result
                     res = op1 * op2;
                 }
                 else {
                     if (op2 == 0)
-                        throw new ApplicationException("Invalid Case 2!");
+                        throw new ApplicationException("Invalid Case 2!"); // % by 0 no possible
 
                     res = op1 / op2;
                 }
