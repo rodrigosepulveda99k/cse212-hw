@@ -1,5 +1,65 @@
 public class FeatureCollection
 {
-    // TODO Problem 5 - ADD YOUR CODE HERE
-    // Create additional classes as necessary
+    public string Type { get; set; }
+    public Metadata Metadata { get; set; }
+    public Feature[] Features { get; set; }
+    public double[] Bbox { get; set; }
+}
+
+public class Metadata
+{
+    public long Generated { get; set; }
+    public string Url { get; set; }
+    public string Title { get; set; }
+    public int Status { get; set; }
+    public string Api { get; set; }
+    public int Count { get; set; }
+}
+
+public class Feature
+{
+    public string Type { get; set; }
+    public Properties Properties { get; set; }
+    public Geometry Geometry { get; set; }
+    public string Id { get; set; }
+}
+
+public class Properties
+{
+    // Important properties for the summary
+    public double Mag { get; set; }
+    public string Place { get; set; }
+
+    // Other properties present in the JSON that are useful to map for full deserialization
+    public long Time { get; set; }
+    public long Updated { get; set; }
+    public int Tz { get; set; }
+    public string Url { get; set; }
+    public string Detail { get; set; }
+    public int? Felt { get; set; } // Nullable because it might not always be present
+    public double? Cdi { get; set; } // Nullable
+    public double? Mmi { get; set; } // Nullable
+    public string Alert { get; set; }
+    public string Status { get; set; }
+    public int Tsunami { get; set; }
+    public int Sig { get; set; }
+    public string Net { get; set; }
+    public string Code { get; set; }
+    public string Ids { get; set; }
+    public string Sources { get; set; }
+    public string Types { get; set; }
+    public int? Nst { get; set; } // Nullable
+    public double? Dmin { get; set; } // Nullable
+    public double Rms { get; set; }
+    public double Gap { get; set; }
+    public string MagType { get; set; }
+    // Note: there's a 'type' property both in Feature and Properties.
+    // The 'type' in Properties is the earthquake type (e.g., "earthquake", "quarry blast").
+    public string Type { get; set; }
+}
+
+public class Geometry
+{
+    public string Type { get; set; }
+    public double[] Coordinates { get; set; }
 }
