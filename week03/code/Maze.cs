@@ -156,7 +156,7 @@ public class Maze
     }
 }
 
-// Example Usage (for testing purposes, not part of the Maze class itself):
+// Example Usage 
 /*
 public class MazeTest
 {

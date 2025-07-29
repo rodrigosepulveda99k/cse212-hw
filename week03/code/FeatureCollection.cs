@@ -37,8 +37,8 @@ public class Properties
     public string Url { get; set; }
     public string Detail { get; set; }
     public int? Felt { get; set; } // Nullable because it might not always be present
-    public double? Cdi { get; set; } // Nullable
-    public double? Mmi { get; set; } // Nullable
+    public double? Cdi { get; set; } 
+    public double? Mmi { get; set; } 
     public string Alert { get; set; }
     public string Status { get; set; }
     public int Tsunami { get; set; }
@@ -48,13 +48,12 @@ public class Properties
     public string Ids { get; set; }
     public string Sources { get; set; }
     public string Types { get; set; }
-    public int? Nst { get; set; } // Nullable
-    public double? Dmin { get; set; } // Nullable
+    public int? Nst { get; set; }
+    public double? Dmin { get; set; }
     public double Rms { get; set; }
     public double Gap { get; set; }
     public string MagType { get; set; }
-    // Note: there's a 'type' property both in Feature and Properties.
-    // The 'type' in Properties is the earthquake type (e.g., "earthquake", "quarry blast").
+   
     public string Type { get; set; }
 }
 
